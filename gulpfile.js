@@ -1,25 +1,25 @@
 // Defining requirements
-var gulp = require( 'gulp' );
-var plumber = require( 'gulp-plumber' );
-var sass = require( 'gulp-sass' );
-var babel = require( 'gulp-babel' );
-var postcss = require( 'gulp-postcss' );
-var touch = require( 'gulp-touch-fd' );
-var rename = require( 'gulp-rename' );
-var concat = require( 'gulp-concat' );
-var inject = require('gulp-inject-string');
-var uglify = require( 'gulp-uglify' );
-var imagemin = require( 'gulp-imagemin' );
-var sourcemaps = require( 'gulp-sourcemaps' );
-var browserSync = require( 'browser-sync' ).create();
-var del = require( 'del' );
-var cleanCSS = require( 'gulp-clean-css' );
-var replace = require( 'gulp-replace' );
-var autoprefixer = require( 'autoprefixer' );
+const gulp = require( 'gulp' );
+const plumber = require( 'gulp-plumber' );
+const sass = require('gulp-sass')(require('sass'));
+const babel = require( 'gulp-babel' );
+const postcss = require( 'gulp-postcss' );
+const touch = require( 'gulp-touch-fd' );
+const rename = require( 'gulp-rename' );
+const concat = require( 'gulp-concat' );
+const inject = require('gulp-inject-string');
+const uglify = require( 'gulp-uglify' );
+const imagemin = require( 'gulp-imagemin' );
+const sourcemaps = require( 'gulp-sourcemaps' );
+const browserSync = require( 'browser-sync' ).create();
+const del = require( 'del' );
+const cleanCSS = require( 'gulp-clean-css' );
+const replace = require( 'gulp-replace' );
+const autoprefixer = require( 'autoprefixer' );
 
 // Configuration file to keep your code DRY
-var cfg = require( './gulpconfig.json' );
-var paths = cfg.paths;
+const cfg = require( './gulpconfig.json' );
+const paths = cfg.paths;
 
 /**
  * Compiles .scss to .css files.
